@@ -1,4 +1,11 @@
 from __future__ import annotations
+from pathlib import Path
+
+# directories
+ROOT_DIR: Path = Path(__file__).resolve().parent.parent
+DATA_DIR: Path = ROOT_DIR / "data" / "raw"
+DATASET_PATH: Path = DATA_DIR / "PhiUSIIL_Phishing_URL_Dataset.csv"
+
 # url based features
 url_features: list[str] = [
     'URLLength',
@@ -64,3 +71,4 @@ exclude_features = [
     'Pay',
     'Crypto',
 ]
+
